@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Student(id, name, gender, age, mark) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.mark = mark;
+      }
+
+      let newStudent = new Student(1, "Nguyen Van A", "nam", 20, 8);
+
+      let students = [];
+
+      students.push(newStudent);
+
+      console.log(students[0].id);
+
+      console.log(students[0].name);
+      console.log(students[0].gender);
+      console.log(students[0].age);
+      console.log(students[0].mark);
+    </script>
+  </body>
+</html>

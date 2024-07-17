@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let staff = {
+        id: 1,
+        name: "Ronaldo",
+        age: 30,
+        salary: 1000,
+      };
+
+      let company = [];
+
+      company.push(staff);
+
+      let newStaff = {
+        id: 2,
+        newName: "Best Yasua viet nam",
+        age: 20,
+        salary: 100,
+      };
+
+      let newStaff3 = {
+        id: 3,
+        newName: " viet nam",
+        age: 20,
+        salary: 100,
+      };
+
+      company.push(newStaff3);
+      company.push(newStaff);
+
+      //   let inputUpdate = Number(prompt("Nhập vào id nhân viên muốn cập nhật"));
+      //   let updateSalary = Number(prompt("Nhập mức lương muốn thay đổi"));
+
+      //   let findIndex = company.findIndex((e) => inputUpdate == e.id);
+      //   company[findIndex].salary = updateSalary;
+
+      let deleteInput = Number(prompt("nhập id tên nhân viên muốn xóa"));
+
+      let deleteFindIndex = company.findIndex((e) => deleteInput == e.id);
+
+      company.splice(deleteFindIndex, 1);
+
+      console.log(company);
+    </script>
+  </body>
+</html>

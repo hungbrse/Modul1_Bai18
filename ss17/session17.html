@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let students = [
+      "HungDz123",
+      "Tieng Meo Keu",
+      "121",
+      "dasdwfaw",
+      "A cẩu",
+      "A cục",
+    ];
+
+    //   // khi mình không quan tâm đến vị trí của index
+    //   for (const key of students) {
+    //     console.log(students.indexOf(key));
+    //     console.log(key);
+    // }
+    // quan tâm đến vị trí index
+    // for (let index in students) {
+    //   console.log(index, students[index]);
+    // }
+
+    //   //
+    //   students.forEach(function (elment, index) {
+    //     console.log(index, elment);
+    //   });
+
+    // map();
+
+    //   let newArr = students.map(function (element, index) {
+    //     return `${element} đều thi hackathon`;
+    //   });
+
+    //   console.log(newArr);
+
+    //   let filterStudents = students.filter(function (element, index) {
+    //     return element.startsWith("A") === true;
+    //   });
+
+    //   console.log(filterStudents);
+
+    // reduce - Nén giảm phần tử
+
+    let numbers = [10, 0, 7, -5, 4, 200];
+
+    //   let result = numbers.reduce(function (acc, cur) {
+    //     acc = acc + cur;
+    //     return acc;
+    //   }, 0); // let acc = 0;
+
+    //   console.log(result);
+
+    //   let result2 = numbers.reduce(function (acc, cur) {
+    //     acc = acc * cur;
+    //     return acc;
+    //   }, 1); // let acc = 0;
+
+    //   console.log(result2);
+
+    // sort() - sắp xếp
+
+    let softNumbers = numbers.sort(function (a, b) {
+      return a - b; // sắp xếp tăng dần
+    });
+
+    console.log(softNumbers);
+
+    let softNumbers2 = numbers.sort(function (a, b) {
+      return b - a; // sắp xếp giảm dần
+    });
+
+    console.log(softNumbers2);
+
+    let ngocSora = {
+      name: "ngoc Sora",
+      gender: "i dont know",
+      age: 23,
+      married: false,
+    };
+
+    // Thêm thuộc tính job
+    ngocSora.job = "Brse";
+
+    console.log(ngocSora);
+
+    // Đọc thuộc tính age
+    console.log(ngocSora.age);
+
+    // In tất cả các thuộc tính và giá trị của object cùng với index của chúng
+    let keys = Object.keys(ngocSora);
+
+    keys.forEach((key, index) => {
+      console.log(`Index: ${index}, Key: ${key}, Value: ${ngocSora[key]}`);
+    });
+  </script>
+</body>
+key

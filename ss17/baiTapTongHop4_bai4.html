@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("CRUDE").trim().toLowerCase;
+
+      let id = 0;
+
+      let arr = [];
+
+      while (input !== "e") {
+        switch (input) {
+          case "r":
+            if (arr.length > 0) {
+              console.log(arr);
+            } else {
+              console.log("Array rỗng");
+            }
+            break;
+
+          case "c":
+            let name = prompt("Hay nhap ten khoa hoc");
+            let complete = prompt("Hay nhap trang thai");
+
+            let khoaHoc = {
+              id: id++,
+              name: name,
+              complete: complete,
+            };
+
+            arr.push(khoaHoc);
+            console.log(arr);
+            break;
+
+          case "u":
+            if (arr.length > 0) {
+              let update = +prompt(
+                `Hay Nhap Vi tri Muon update tu 0 => + ${arr.length - 1} `
+              );
+
+              let updateFuntion = arr.findIndex((e) => e.id === update);
+
+              if (updateFuntion !== -1) {
+                let updateTxt = prompt("Noi Dung Update");
+
+                arr[updateFuntion].name = updateTxt;
+              }
+            }
+            console.log(arr);
+            break;
+
+          case "d":
+            if (arr.length > 0) {
+              let deleteIndex = +prompt(
+                "Nhập vị trí index muốn xóa từ 1 => " + arr.length
+              );
+
+              // Check if deleteIndex is within the valid range
+              if (deleteIndex >= 1 && deleteIndex <= arr.length) {
+                arr.splice(deleteIndex - 1, 1);
+                console.log(arr);
+              } else {
+                console.log("Vị trí index không hợp lệ");
+              }
+            } else {
+              console.log("Array rỗng");
+            }
+
+            break;
+
+          default:
+            break;
+        }
+
+        input = prompt("CRUDE").trim().toLowerCase();
+      }
+
+
+      
+    </script>
+  </body>
+</html>

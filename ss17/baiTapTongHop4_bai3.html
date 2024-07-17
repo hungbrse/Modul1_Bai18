@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(name, email, address, numberPhone, role) {
+          this.name = name;
+          this.email = email;
+          this.address = address;
+          this.numberPhone = numberPhone;
+          this.role = role; // Ensure the role property is assigned
+        }
+      }
+
+      class Admin extends User {
+        constructor(name, email, address, numberPhone, role) {
+          super(name, email, address, numberPhone, role); // Call the constructor of the parent class
+        }
+      }
+
+      let user1 = new User(
+        "Hùng",
+        "nguyenphuonghung1002@gmail.com",
+        "Bắc Ninh",
+        "0327842123",
+        0
+      );
+      let user2 = new User("Mều", "meo2gmail.com", "Phố Mều", "053742681", 0);
+      let user3 = new User(
+        "Chos Tùng",
+        "chostung@gmail.com",
+        "Phố CHó",
+        "0321030213",
+        0
+      );
+
+      let admin = new Admin(
+        "admin",
+        "admin@gmail.com",
+        "Admin City",
+        "0626677028",
+        1
+      );
+
+      let users = [user1, user2, user3, admin];
+
+      function deleteUserByName(users, nameToDelete) {
+        return users.filter((user) => user.name !== nameToDelete);
+      }
+
+      // Example usage
+      let deleteUsers = deleteUserByName(users, "bemow");
+      console.log(deleteUsers);
+
+      let updateUsers = users.filter((e) => e.role === 0);
+
+      console.log(updateUsers);
+
+      let admin2 = new Admin(
+        "admin2",
+        "admi2n@gmail.com",
+        "Admin2 City",
+        "0626677028",
+        1
+      );
+
+      users.push(admin2);
+
+      let findAdimin = users.filter((e) => e.role === 1);
+
+      console.log(findAdimin);
+    </script>
+  </body>
+</html>

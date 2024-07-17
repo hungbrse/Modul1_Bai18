@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let players = {
+        name: "Messi",
+        age: 30,
+        nation: "Argentine",
+        club: "PSG",
+      };
+
+      players.email = "nguyenphuonghung1002@gmail.com";
+      players.club = "Barcelone";
+
+      // Duyệt qua đối tượng players và in ra các thành phần
+      for (const key in players) {
+        console.log(`${key}: ${players[key]}`);
+      }
+
+      // Xóa thành phần age
+      delete players.age;
+
+      // In ra đối tượng players sau khi xóa thành phần age
+      console.log("After deleting age:");
+      for (const key in players) {
+        console.log(`${key}: ${players[key]}`);
+      }
+
+      console.log(players);
+    </script>
+  </body>
+</html>

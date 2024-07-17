@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let products = [
+        { id: 1, name: "Milk", count: 100 },
+        { id: 2, name: "Yakult", count: 100 },
+        { id: 3, name: "Butter", count: 100 },
+        { id: 4, name: "kha banh", count: 400 },
+      ];
+
+      // Tìm chỉ mục của phần tử có id là 2
+      let deleteItemIndex = products.findIndex((element) => element.id === 2);
+
+      // Xóa phần tử tại chỉ mục đã tìm thấy
+      if (deleteItemIndex !== -1) {
+        products.splice(deleteItemIndex, 1);
+      }
+
+      // Tìm chỉ mục của phần tử có id là 3
+      let updateItemIndex = products.findIndex((element) => element.id === 3);
+
+      // Cập nhật count của phần tử tại chỉ mục đã tìm thấy
+      if (updateItemIndex !== -1) {
+        products[updateItemIndex].count = 0;
+      }
+
+      console.log(products);
+    </script>
+  </body>
+</html>
